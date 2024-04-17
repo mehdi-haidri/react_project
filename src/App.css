@@ -1,0 +1,318 @@
+.App{
+
+  height: 100vh;
+}
+*{
+  box-sizing: border-box;
+}
+
+body{
+  padding: 0;
+ margin: 0;
+ 
+}
+
+.sidebar{
+  width: 250px;
+  height: 100%;
+  background-color: #007FFF;
+}
+
+.barlist{
+  padding: 0;
+  list-style-type: none;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+  width: 100%;
+  height: auto;
+
+}
+
+.row{
+ width: 100%;
+ height: 50px;
+cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-weight: 600;
+  color: white;
+}
+
+.row:hover{
+  background-color: rgb(145,194,242);
+}
+.row #icon{
+  width: 5px;
+  flex:30%;
+  display: grid;
+  place-items: center;
+  
+}
+.row #title{
+  flex:70%;
+ 
+}
+
+.barlist #active{
+
+  color: rgb(145, 242, 189);
+}
+
+.container1{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.scroll{
+  width: calc(100% - 250px);
+  overflow:scroll;
+  scroll-behavior: smooth;
+  
+padding: 10px;
+}
+
+.login{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background-color: #007FFF;
+}
+
+.login .loginform{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: "form";
+  flex-direction: column;
+  justify-content: space-between;
+
+
+}
+
+.login .loginform label{
+  text-align: center;
+  color: #007FFF;
+ display: inline-block;
+  width: 100px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+
+}
+
+
+.login .submit{
+width: 70px;
+text-decoration: none;
+padding: 10px;
+color: white;
+background-color: #007FFF;
+border: none;
+border-radius: 5px;
+}
+.login .submit:hover{
+  color: black;
+}
+
+.loginstyle{
+  background-color: rgb(255, 255, 255);
+ display: grid;
+ grid-template-areas: "logo" "form" "form" "form";
+ place-items: center;
+ border-radius: 10px;
+ width: calc(20% + 300px);
+  height: 55%;
+
+}
+
+.logo{
+  grid-area: 'logo';
+}
+
+.loginstyle input:not(:nth-child(4)){
+  cursor: pointer;
+  border: 2px solid #007FFF;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: gray;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.loginstyle .input1,.input2{
+ display:flex ;
+ width: 100%;
+ flex-direction: column;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.loginstyle .message{
+font-family: Arial, Helvetica, sans-serif;
+  color: red;
+  font-weight: 600;
+
+}
+
+.loginstyle hr{
+  height: 5px;
+  background-color: #007FFF;
+  width: 270px;
+  border-radius: 5px;
+  
+}
+
+
+.loginstyle .sign button{
+  min-width: 70px;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    background-color: #007FFF;
+    border: none;
+    border-radius: 5px;
+}
+.loginstyle .sign button:hover{
+  color: black;
+}
+
+.loginstyle .logo h1 {
+font-weight: 600;
+text-align: center;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.loginstyle .messagesignupsucces{
+  font-family: Arial, Helvetica, sans-serif;
+    color: rgb(4, 169, 4);
+    font-weight: 600;
+  
+  }
+.loginstyle .messagesignupfaild{
+  font-family: Arial, Helvetica, sans-serif;
+    color: rgb(169, 4, 4);
+    font-weight: 600;
+  
+  }
+
+
+  /* /////////////////////////// */
+
+  .navebar {
+    
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between;
+  }
+  .navebar::before{
+  position: absolute;
+  content: "";
+  background-color: #007FFF;
+  width: 100%;
+  transition: .3s;
+  top: 100%;
+  height: 5px;
+
+
+  }
+  .navebar .list{
+    width: 30%;
+    display: flex;
+    align-items: center;
+  }
+  .navebar .list ul { 
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    width: 100%;
+  }
+  .navebar .list ul li{ 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    color: #007FFF;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .navebar .list ul li:not(:last-child){ 
+    margin-right: 20%;
+   
+  }
+  .navebar .list ul li::before{
+    position: absolute;
+  content: "";
+  background-color: #007FFF;
+  width: 0px;
+  transition: .3s;
+  top: 130%;
+  height: 5px;
+  border-radius: 5px;
+  }
+  .navebar .list ul li:hover::before{
+    width: 50px;
+  }
+
+  .navebar .logo img{
+    width:100px;
+    border-radius: 50%;
+  }
+
+  .navebar .logo{
+    text-align: center;
+    min-width: 250px;
+    background-color: #007FFF;
+  }
+.profile_logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+  /* //////////////////////////////////////////////// */
+
+  .profile{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    padding: 3px;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  .profile .image{
+    width: 70px;
+    position: relative;
+  }
+  .profile .icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+    transition: .3s;
+  }
+  .profile .image:hover .icon{
+  display: block;
+  }
+  .profile .image input{
+    display: none;
+  }
+
+  .profile .image_profile{
+    width: 100%;
+    border: 1px solid #007FFF;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+
+  .profile h2{
+    margin-left: 3px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
