@@ -1,16 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import '../App.css';
 import { useState } from 'react'
 import SchoolIcon from '@mui/icons-material/School';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { AuthContext } from '../context/context';
+import { useNavigate } from 'react-router-dom';
 
 
 
 export default function Login() {
-    let [username, setusername] = useState("");
-    let [password, setpassword] = useState("");
-    let [type, settype] = useState("");
-    let [error, seterror] = useState('');
+    const [username, setusername] = useState("");
+    const [password, setpassword] = useState("");
+     const [type, settype] = useState("");
+    const [error, seterror] = useState('');
+    const { isAuthenticated, login, logout } = useContext(AuthContext);
+    const Navigate = useNavigate();
 
 
     const handlesubmit = async  (e) => {
@@ -40,19 +44,16 @@ export default function Login() {
             seterror(data.error);
         } else {
             if (data.username === username && data.password === password) {
-                window.location.pathname = "/mainpage/" + data.user_type;
-           
-                localStorage.setItem("username", data.username);
-                localStorage.setItem("id", data.id);
-                localStorage.setItem("password", data.password);
-                localStorage.setItem('user_type', data.user_type);
+
+                login(data);
+               
             }
         }
     }
     
     const hundlsignup = () => {
         
-        window.location.pathname = "/SignUP";
+        Navigate( "/SignUP");
     }
 
     let style = {
@@ -69,11 +70,11 @@ export default function Login() {
               </div>
               <form className='loginform' onSubmit={handlesubmit} >
                   <select className="form-select" aria-label="Default select example" onChange={(e) => {settype(e.target.value)}}>
-                   <option selected>Open this select menu</option>
+                   <option defaultValue={'Open this select menu'}>Open this select menu</option>
                    <option value="student">Student</option>
                    <option value="professeurs">prof</option>
                    
-            </select>
+                     </select>
               <div className='input1'>
                <label>Username</label><input required type='text' name='username' onChange={(e)=>setusername(e.target.value) } value = {username} />
               </div>

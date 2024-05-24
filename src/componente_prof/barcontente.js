@@ -8,7 +8,7 @@ import ImageSearchIcon from '@mui/icons-material/ImageSearch';
 export const Barcontente = [
     {
         
-        link: "/mainpage/Home",
+        link: "/mainpage/professeurs/Home",
         icon: <HomeIcon />,
         title : "Afecter les note"
 
@@ -16,7 +16,7 @@ export const Barcontente = [
     },
     {
         
-        link: "/mainpage/Dashbord",
+        link: "/mainpage/professeurs/Dashbord",
         icon: <SpaceDashboardIcon />,
         title : "Dashbord"
 
@@ -24,7 +24,7 @@ export const Barcontente = [
     },
     {
         
-        link: "/mainpage/About",
+        link: "/mainpage/professeurs/About",
         icon: <InfoIcon />,
         title : "About"
 

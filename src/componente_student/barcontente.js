@@ -8,7 +8,7 @@ import ImageSearchIcon from '@mui/icons-material/ImageSearch';
 export const Barcontente = [
     {
         
-        link: "/mainpage/Home",
+        link: "/mainpage/student/Home",
         icon: <HomeIcon />,
         title : "Notes"
 
@@ -16,7 +16,7 @@ export const Barcontente = [
     },
     {
         
-        link: "/mainpage/Dashbord",
+        link: "/mainpage/student/Dashbord",
         icon: <SpaceDashboardIcon />,
         title : "Dashbord"
 
@@ -24,7 +24,7 @@ export const Barcontente = [
     },
     {
         
-        link: "/mainpage/About",
+        link: "/mainpage/student/About",
         icon: <InfoIcon />,
         title : "About"
 
@@ -32,7 +32,7 @@ export const Barcontente = [
     },
     {
         
-        link: "/mainpage/Images",
+        link: "/mainpage/student/Images",
         icon: <ImageSearchIcon />,
         title : "Images"
 
@@ -40,7 +40,7 @@ export const Barcontente = [
     },
     {
         
-        link: "/mainpage/Friends",
+        link: "/mainpage/student/Friends",
         icon: <Diversity3Icon  />,
         title : "Friends"
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import '../App.css';
-import { useEffect, useState } from 'react'
+import {  useState } from 'react'
 import SchoolIcon from '@mui/icons-material/School';
 export default function SignUp() {
     const style = {
@@ -31,7 +31,7 @@ export default function SignUp() {
             body :JSON.stringify(info)
         }).then(res=>res.json())
 console.log(data)
-        if (data == false) {
+        if (data === false) {
             setmessage('succesfully signed up');
             setsucces(true)
             setusername('');
@@ -69,7 +69,7 @@ console.log(data)
                
               <input type='submit' className='submit' value='Sign Up'/>
               </form>
-              {succes && <div className={message == "username is taken" ?"messagesignupfaild" :'messagesignupsucces' } ><p>{ message}</p></div>}
+              {succes && <div className={message === "username is taken" ?"messagesignupfaild" :'messagesignupsucces' } ><p>{ message}</p></div>}
               <hr></hr>
               <div className='sign up' onClick={hundlreturn}
               ><button>Log In</button></div>

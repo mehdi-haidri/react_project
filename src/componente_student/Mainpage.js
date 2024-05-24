@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidebar from './sidebar';
 import Contente from './Contente';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import Navebar from './Navebar';
 import '../App.css';
 function Mainpage() {
@@ -13,15 +13,8 @@ function Mainpage() {
     <div className='container1'>
         
         <Sidebar />
-          <Switch>
-            <Route exact path='/mainpage/student'>
-            </Route>
-            <Route  path = '/mainpage/student/Home'>
-                <Contente/>
-            </Route>
-          </Switch>
-     
-        
+
+          <Outlet/>
       </div>
     </>
       
